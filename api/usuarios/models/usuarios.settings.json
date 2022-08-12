@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "usuarios",
+  "info": {
+    "name": "usuarios",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "username": {
+      "type": "string",
+      "required": true,
+      "minLength": 5,
+      "unique": true
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    },
+    "password": {
+      "type": "string",
+      "required": true,
+      "minLength": 8,
+      "private": false
+    },
+    "comments": {
+      "via": "usuario",
+      "collection": "comments"
+    },
+    "publications": {
+      "via": "usuario",
+      "collection": "publications"
+    },
+    "like": {
+      "via": "usuario",
+      "model": "like"
+    },
+    "perfil": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

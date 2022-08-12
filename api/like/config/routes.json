@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/likes",
+      "handler": "like.find",
+      "config": {
+        "policies": ["global::permissions"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/likes/count",
+      "handler": "like.count",
+      "config": {
+        "policies": ["global::permissions"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/likes/:id",
+      "handler": "like.findOne",
+      "config": {
+        "policies": ["global::permissions"]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/likes",
+      "handler": "like.create",
+      "config": {
+        "policies": ["global::permissions"]
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/likes/:id",
+      "handler": "like.update",
+      "config": {
+        "policies": ["global::permissions"]
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/likes/:id",
+      "handler": "like.delete",
+      "config": {
+        "policies": ["global::permissions"]
+      }
+    }
+  ]
+}

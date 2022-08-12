@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "type_publications",
+  "info": {
+    "name": "type_publications",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "minLength": 5
+    },
+    "publications": {
+      "via": "type_publication",
+      "collection": "publications"
+    }
+  }
+}

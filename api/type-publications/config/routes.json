@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/type-publications",
+      "handler": "type-publications.find",
+      "config": {
+        "policies": ["global::permissions"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/type-publications/count",
+      "handler": "type-publications.count",
+      "config": {
+        "policies": ["global::permissions"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/type-publications/:id",
+      "handler": "type-publications.findOne",
+      "config": {
+        "policies": ["global::permissions"]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/type-publications",
+      "handler": "type-publications.create",
+      "config": {
+        "policies": ["global::permissions"]
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/type-publications/:id",
+      "handler": "type-publications.update",
+      "config": {
+        "policies": ["global::permissions"]
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/type-publications/:id",
+      "handler": "type-publications.delete",
+      "config": {
+        "policies": ["global::permissions"]
+      }
+    }
+  ]
+}

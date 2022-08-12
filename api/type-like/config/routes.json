@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/type-likes",
+      "handler": "type-like.find",
+      "config": {
+        "policies": ["global::permissions"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/type-likes/count",
+      "handler": "type-like.count",
+      "config": {
+        "policies": ["global::permissions"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/type-likes/:id",
+      "handler": "type-like.findOne",
+      "config": {
+        "policies": ["global::permissions"]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/type-likes",
+      "handler": "type-like.create",
+      "config": {
+        "policies": ["global::permissions"]
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/type-likes/:id",
+      "handler": "type-like.update",
+      "config": {
+        "policies": ["global::permissions"]
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/type-likes/:id",
+      "handler": "type-like.delete",
+      "config": {
+        "policies": ["global::permissions"]
+      }
+    }
+  ]
+}

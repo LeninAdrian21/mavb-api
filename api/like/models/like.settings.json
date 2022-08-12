@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "likes",
+  "info": {
+    "name": "like",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "publication": {
+      "via": "likes",
+      "model": "publications"
+    },
+    "usuario": {
+      "via": "like",
+      "model": "usuarios"
+    },
+    "type_like": {
+      "via": "likes",
+      "model": "type-like"
+    }
+  }
+}

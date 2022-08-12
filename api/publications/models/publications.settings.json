@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "publications",
+  "info": {
+    "name": "publications",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "text",
+      "required": false,
+      "minLength": 20,
+      "maxLength": 1000
+    },
+    "datos": {
+      "type": "json",
+      "required": false
+    },
+    "file": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "public": {
+      "type": "boolean",
+      "default": false
+    },
+    "type_publication": {
+      "via": "publications",
+      "model": "type-publications"
+    },
+    "usuario": {
+      "via": "publications",
+      "model": "usuarios"
+    },
+    "likes": {
+      "via": "publication",
+      "collection": "like"
+    },
+    "comments": {
+      "via": "publication",
+      "collection": "comments"
+    }
+  }
+}
